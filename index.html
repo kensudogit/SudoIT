@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>須藤技術士事務所 / ITエンジニア事務所 | ポートフォリオ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="個人事業主 ITエンジニアとして、Webシステム開発・AWSクラウド構築・DX支援を行う須藤技術士事務所のポートフォリオサイトです。" />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #dbeafe;
+      --bg: #f5f5f5;
+      --text: #111827;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --radius-lg: 16px;
+      --radius-sm: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: #ffffffcc;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    .nav-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .nav-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    main {
+      padding-bottom: 48px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 32px 0 40px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: #1d4ed8;
+      font-size: 0.75rem;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: var(--muted);
+      border-color: #d1d5db;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-side {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+      font-size: 0.85rem;
+    }
+
+    .hero-side-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero-side-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .label {
+      color: var(--muted);
+    }
+
+    .value {
+      font-weight: 500;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f9fafb;
+      font-size: 0.75rem;
+      margin-top: 6px;
+    }
+
+    /* Sections */
+    section {
+      padding: 24px 0;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 14px 16px;
+      border: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .list {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+
+    .list li {
+      margin-bottom: 4px;
+    }
+
+    .badge-sm {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 999px;
+      margin-right: 4px;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 16px 0 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div>
+          <div class="nav-title">須藤技術士事務所 / ITエンジニア事務所</div>
+          <div class="nav-sub">個人事業主 ITエンジニア | Webシステム開発 / AWS / DX支援</div>
+        </div>
+        <div class="nav-links">
+          <a href="#works">実績</a>
+          <a href="#services">サービス</a>
+          <a href="#profile">プロフィール</a>
+          <a href="#contact">お問い合わせ</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              個人事業主 ITエンジニア / 開発〜クラウドまで一気通貫
+            </div>
+            <h1 class="hero-title">中小企業の「困った」をITで解決する<br />あなた専属のエンジニアパートナー</h1>
+            <p class="hero-subtitle">
+              要件定義から設計・開発・AWSインフラ構築・運用まで。<br />
+              不動産・製造・教育など、業務システムの0→1と改善を支援します。
+            </p>
+            <div class="hero-tags">
+              <span class="tag">Webシステム開発</span>
+              <span class="tag">AWS / クラウド</span>
+              <span class="tag">DX支援</span>
+              <span class="tag">既存システムモダナイズ</span>
+              <span class="tag">Python / Java / React</span>
+            </div>
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary">案件・ご相談はこちら</a>
+              <a href="#works" class="btn-outline">開発実績を見る</a>
+            </div>
+          </div>
+
+          <aside class="hero-side">
+            <div class="hero-side-title">事業情報</div>
+            <div class="hero-side-row">
+              <div class="label">事業者</div>
+              <div class="value">須藤技術士事務所</div>
+            </div>
+            <div class="hero-side-row">
+              <div class="label">所在地</div>
+              <div class="value">東京都三鷹市</div>
+            </div>
+            <div class="hero-side-row">
+              <div class="label">開業</div>
+              <div class="value">2018年4月</div>
+            </div>
+            <div class="hero-side-row">
+              <div class="label">対応範囲</div>
+              <div class="value">全国（リモート）</div>
+            </div>
+            <a class="pill-link" href="https://lapras.com/public/AAKGQ0N" target="_blank" rel="noopener">
+              LAPRAS 公開プロフィールを見る →
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services">
+        <h2 class="section-title">提供サービス</h2>
+        <p class="section-desc">
+          要件定義から開発・インフラ構築・運用まで、一気通貫でご支援します。<br />
+          部分的なスポット支援や、既存ベンダーとの協業も可能です。
+        </p>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-title">Web・業務システム開発</div>
+            <div class="card-sub">Spring Boot / Python / React / Vue など</div>
+            <ul class="list">
+              <li>業務システム・管理画面の新規開発</li>
+              <li>既存システムの機能追加・改修</li>
+              <li>要件整理〜運用設計まで対応</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-title">AWSクラウド構築・移行</div>
+            <div class="card-sub">EC2 / RDS / Lambda / API Gateway</div>
+            <ul class="list">
+              <li>新規システムのAWS設計・構築</li>
+              <li>オンプレ／レガシーからクラウド移行</li>
+              <li>セキュリティ・コスト最適化の提案</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-title">DX・業務効率化支援</div>
+            <div class="card-sub">紙・Excel業務の見直し〜システム化</div>
+            <ul class="list">
+              <li>現状業務の棚卸し・課題整理</li>
+              <li>自動化シナリオの設計</li>
+              <li>段階的なDXロードマップの作成</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works -->
+      <section id="works">
+        <h2 class="section-title">開発実績（抜粋）</h2>
+        <p class="section-desc">
+          NDAの範囲内で公開可能な実績を記載しています。詳細は個別にお打ち合わせ時にご紹介可能です。
+        </p>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">不動産販売管理システムの新規開発</div>
+            <div class="card-sub">Spring Boot / PostgreSQL / AWS / Docker</div>
+            <p>
+              不動産会社向けに、顧客管理・案件管理・契約管理を一元管理するWebシステムを新規開発。
+              要件定義〜設計〜実装〜AWSインフラ構築まで一気通貫で担当。
+            </p>
+            <ul class="list">
+              <li>紙ベースの管理を90%削減</li>
+              <li>検索・集計性能の改善により、営業資料作成時間を大幅短縮</li>
+              <li>コンテナ化により、ステージング環境の再現性を向上</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-title">WordPress×AWS マーケティング自動化基盤</div>
+            <div class="card-sub">AWS Lambda / DynamoDB / API Gateway / Python</div>
+            <p>
+              WordPressの記事・問い合わせデータをAWS上で集約・分析し、メルマガやキャンペーン施策に活用する基盤を構築。
+              マーケティング担当者がノーコードで活用できる設計を意識。
+            </p>
+            <ul class="list">
+              <li>問い合わせ率が従来比120%向上</li>
+              <li>レポート作成の自動化により、担当者の作業時間を削減</li>
+              <li>スケーラビリティの高いサーバーレス構成を採用</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-title">レガシー業務システムのWeb化・モダナイズ</div>
+            <div class="card-sub">Java / Spring / React / 既存AS/400・VB系からの移行</div>
+            <p>
+              長年運用されてきたオンプレ業務システム（AS/400, VB.NET等）をWebシステムへ段階的に移行。
+              現場負荷を抑えながら、UI刷新・保守性改善を実現。
+            </p>
+            <ul class="list">
+              <li>保守コスト約30%削減</li>
+              <li>属人化していたバッチ処理の見える化・標準化</li>
+              <li>将来的なクラウド移行も見据えたアーキテクチャ設計</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-title">AI・スクレイピングを用いたデータ収集・分析基盤</div>
+            <div class="card-sub">Python / BeautifulSoup / 機械学習</div>
+            <p>
+              Web上の公開情報を自動収集し、業界動向や競合情報を可視化する内部利用向けツールを開発。
+            </p>
+            <ul class="list">
+              <li>手作業での情報収集をほぼゼロに</li>
+              <li>定期レポートを自動生成し、経営層への共有を効率化</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile -->
+      <section id="profile">
+        <h2 class="section-title">プロフィール・技術スタック</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-title">代表プロフィール</div>
+            <p>
+              個人事業主 ITエンジニアとして、Webシステム開発・AWSクラウド構築・DX支援を中心に活動しています。
+              中小企業〜中堅企業の「IT専任担当者がいない」「どこから手を付けてよいかわからない」といった悩みに寄り添い、
+              現場にフィットするシステムと運用を一緒に作ることを大切にしています。
+            </p>
+            <ul class="list">
+              <li>2018年：個人事業主として独立</li>
+              <li>不動産、製造、教育、サービス業などの案件に従事</li>
+              <li>レガシー環境からクラウドネイティブまで幅広く対応</li>
+            </ul>
+            <p style="margin-top: 8px;">
+              ▶ LAPRAS 公開プロフィール：<br />
+              <a href="https://lapras.com/public/AAKGQ0N" target="_blank" rel="noopener">
+                https://lapras.com/public/AAKGQ0N
+              </a>
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-title">技術スタック</div>
+            <p>
+              代表的な技術・ツールは以下の通りです。案件に応じて新技術のキャッチアップも積極的に行っています。
+            </p>
+            <p style="margin-top: 6px;">
+              <span class="badge-sm">Backend</span> Python / Java（Spring Boot） / Node.js<br />
+              <span class="badge-sm">Frontend</span> React / Next.js / Vue.js<br />
+              <span class="badge-sm">Database</span> PostgreSQL / MySQL / DynamoDB<br />
+              <span class="badge-sm">Cloud・Infra</span> AWS（EC2 / RDS / Lambda / API Gateway） / Docker / Kubernetes<br />
+              <span class="badge-sm">Other</span> スクレイピング / 機械学習 / CI/CD
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2 class="section-title">お問い合わせ</h2>
+        <p class="section-desc">
+          新規開発・既存システムの改修・DX相談など、まずはお気軽にご相談ください。<br />
+          ご相談内容を拝見した上で、オンライン打ち合わせの日程をご提案いたします。
+        </p>
+        <div class="card">
+          <p>
+            <strong>メール：</strong>
+            <a href="mailto:kensudo@jcom.zaq.ne.jp">kensudo@jcom.zaq.ne.jp</a><br />
+            <strong>所在地：</strong> 東京都三鷹市 ほか（リモート中心で全国対応）<br />
+            <strong>初回相談：</strong> 無料（30〜60分程度／オンライン）
+          </p>
+          <p style="margin-top: 10px;">
+            ※お問い合わせの際は、以下の情報をお書き添えいただけますとスムーズです。
+          </p>
+          <ul class="list">
+            <li>ご相談内容の概要（新規開発 / 改修 / DX相談など）</li>
+            <li>現状のシステム・環境（わかる範囲で結構です）</li>
+            <li>ご希望のスケジュール感</li>
+            <li>ご予算の目安（未定でも可）</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 須藤技術士事務所 / ITエンジニア事務所 – 個人事業主 ITエンジニア
+    </div>
+  </footer>
+</body>
+</html>

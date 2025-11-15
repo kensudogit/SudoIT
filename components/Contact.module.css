@@ -1,0 +1,159 @@
+.contact {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionDesc {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px 40px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.contactInfo {
+  margin-bottom: 32px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(102, 126, 234, 0.03);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+}
+
+.contactItem:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  color: var(--text);
+  font-size: 1rem;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.emailLink {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.emailLink:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.note {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 2px solid var(--border);
+}
+
+.noteTitle {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.list {
+  padding-left: 20px;
+  margin-top: 8px;
+  list-style: none;
+}
+
+.list li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 24px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionDesc {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 32px 24px;
+  }
+
+  .contactItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .label {
+    min-width: auto;
+  }
+}
+
