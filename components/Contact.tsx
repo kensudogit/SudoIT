@@ -1,5 +1,5 @@
 import styles from './Contact.module.css'
-import AIDocumentForm from './AIDocumentForm'
+import AIDocumentForm from './AIDocumentForm.tsx'
 
 export default function Contact() {
   return (
