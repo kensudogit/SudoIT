@@ -36,6 +36,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -134,5 +135,39 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* フォーカス表示の改善 */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* プリロードの最適化 */
+link[rel="preload"] {
+  as: "font";
+  type: "font/woff2";
+  crossorigin: "anonymous";
+}
+
+/* パフォーマンス最適化 */
+img {
+  content-visibility: auto;
+  loading: lazy;
+}
+
+/* プリロードヒント */
+a[href^="#"] {
+  scroll-behavior: smooth;
+}
+
+/* 印刷スタイル */
+@media print {
+  .header,
+  .scrollToTop,
+  .skipLink {
+    display: none;
+  }
 }
 

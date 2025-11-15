@@ -30,6 +30,29 @@
 
 .navBrand {
   flex: 1;
+  text-decoration: none;
+  display: block;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  border-radius: 8px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.brandText {
+  flex: 1;
 }
 
 .navTitle {
@@ -64,6 +87,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .navLink:hover {
@@ -77,6 +102,23 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+  .logoContainer {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navTitle {
+    font-size: 1rem;
+  }
+
+  .navSub {
+    font-size: 0.7rem;
   }
 
   .navLinks {

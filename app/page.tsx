@@ -5,12 +5,15 @@ import Works from '@/components/Works'
 import Profile from '@/components/Profile'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import SkipToContent from '@/components/SkipToContent'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export default function Home() {
   return (
     <>
+      <SkipToContent />
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <Services />
         <Works />
@@ -18,7 +21,13 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   )
+}
+
+export const metadata = {
+  title: '須藤技術士事務所 / ITエンジニア事務所 | ポートフォリオ',
+  description: '個人事業主 ITエンジニアとして、Webシステム開発・AWSクラウド構築・DX支援を行う須藤技術士事務所のポートフォリオサイトです。',
 }
 

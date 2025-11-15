@@ -28,13 +28,13 @@ export default function Hero() {
               <span className={styles.tag}>Python / Java / React</span>
             </div>
             <div className={`${styles.heroActions} animate-fade-in-up`}>
-              <a href="#contact" className={styles.btnPrimary}>
+              <a href="#contact" className={styles.btnPrimary} aria-label="お問い合わせセクションへ移動">
                 案件・ご相談はこちら
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </a>
-              <a href="#works" className={styles.btnOutline}>
+              <a href="#works" className={styles.btnOutline} aria-label="開発実績セクションへ移動">
                 開発実績を見る
               </a>
             </div>

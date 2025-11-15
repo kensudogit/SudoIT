@@ -69,6 +69,11 @@
   border-left: 4px solid var(--primary);
 }
 
+.contactItem:has(.contactFormLink) {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .contactItem:last-child {
   margin-bottom: 0;
 }
@@ -91,6 +96,44 @@
 .emailLink:hover {
   color: var(--primary-dark);
   text-decoration: underline;
+}
+
+.contactFormLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.contactFormLink:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.contactFormLink:active {
+  transform: translateY(-1px);
+}
+
+.contactFormLink svg {
+  transition: transform 0.3s ease;
+  width: 16px;
+  height: 16px;
+}
+
+.contactFormLink:hover svg {
+  transform: translate(3px, -3px);
 }
 
 .note {

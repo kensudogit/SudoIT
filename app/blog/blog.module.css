@@ -1,0 +1,235 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  min-height: calc(100vh - 200px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.externalLinkBanner {
+  margin: 40px 0;
+  max-width: 100%;
+}
+
+.externalLink {
+  display: block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.externalLink:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.externalLinkContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.externalLinkIcon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.externalLinkText {
+  flex: 1;
+}
+
+.externalLinkTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.externalLinkDesc {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.externalLinkArrow {
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.externalLink:hover .externalLinkArrow {
+  transform: translateX(8px);
+}
+
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.postCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.postCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.postMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.category {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  color: var(--primary);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.readTime {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.postTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.postTitle a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.postTitle a:hover {
+  color: var(--primary);
+}
+
+.postDescription {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.postFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.postDate {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.readMore {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.readMore:hover {
+  color: var(--primary-dark);
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 16px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .externalLinkBanner {
+    margin: 32px 0;
+  }
+
+  .externalLink {
+    padding: 20px;
+  }
+
+  .externalLinkContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .externalLinkIcon {
+    font-size: 2rem;
+  }
+
+  .externalLinkTitle {
+    font-size: 1.1rem;
+  }
+
+  .externalLinkDesc {
+    font-size: 0.85rem;
+  }
+
+  .postsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .postCard {
+    padding: 24px;
+  }
+}
+

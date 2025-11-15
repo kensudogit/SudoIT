@@ -16,9 +16,30 @@ export default function Contact() {
           <div className={styles.contactInfo}>
             <div className={styles.contactItem}>
               <strong className={styles.label}>メール：</strong>
-              <a href="mailto:kensudo@jcom.zaq.ne.jp" className={styles.emailLink}>
+              <a 
+                href="mailto:kensudo@jcom.zaq.ne.jp" 
+                className={styles.emailLink}
+                aria-label="メールアドレス: kensudo@jcom.zaq.ne.jp"
+              >
                 kensudo@jcom.zaq.ne.jp
               </a>
+            </div>
+            <div className={styles.contactItem}>
+              <strong className={styles.label}>お問い合わせ（RAG機能）：</strong>
+              <div style={{ flex: 1 }}>
+                <a 
+                  href="https://rag-azure-nine.vercel.app/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contactFormLink}
+                  aria-label="RAG機能のお問い合わせフォームを開く"
+                >
+                  RAG機能でお問い合わせ
+                  <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5 2H11V8M11 2L5 8M11 2L5 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
             <div className={styles.contactItem}>
               <strong className={styles.label}>所在地：</strong>
