@@ -1,4 +1,5 @@
 import styles from './Contact.module.css'
+import AIDocumentForm from './AIDocumentForm'
 
 export default function Contact() {
   return (
@@ -59,6 +60,17 @@ export default function Contact() {
               <li>ご予算の目安（未定でも可）</li>
             </ul>
           </div>
+        </div>
+        
+        {/* AI資料生成フォーム */}
+        <div className={styles.card} style={{ marginTop: '40px' }}>
+          <div className={styles.header} style={{ marginBottom: '32px' }}>
+            <h3 className={styles.formTitle}>AI資料を生成（無料）</h3>
+            <p className={styles.formDesc}>
+              ご入力いただいた情報を基に、AIがパーソナライズされたITサービス提案資料を生成いたします。
+            </p>
+          </div>
+          <AIDocumentForm />
         </div>
       </div>
     </section>

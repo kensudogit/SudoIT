@@ -101,17 +101,17 @@
 .contactFormLink {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 3px;
   color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-weight: 700;
-  padding: 14px 28px;
-  border-radius: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  font-size: 1.05rem;
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 
@@ -128,8 +128,8 @@
 
 .contactFormLink svg {
   transition: transform 0.3s ease;
-  width: 16px;
-  height: 16px;
+  width: 11px;
+  height: 11px;
 }
 
 .contactFormLink:hover svg {
@@ -172,6 +172,22 @@
   font-size: 1.2rem;
 }
 
+.formTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.formDesc {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .contact {
     padding: 60px 0;
@@ -197,6 +213,14 @@
 
   .label {
     min-width: auto;
+  }
+
+  .formTitle {
+    font-size: 1.5rem;
+  }
+
+  .formDesc {
+    font-size: 0.95rem;
   }
 }
 
