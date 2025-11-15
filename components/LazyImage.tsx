@@ -4,12 +4,21 @@ import { useState } from 'react'
 import Image from 'next/image'
 import styles from './LazyImage.module.css'
 
+/**
+ * 遅延読み込み画像コンポーネントのプロパティ
+ */
 interface LazyImageProps {
+  /** 画像のソースURL */
   src: string
+  /** 画像の代替テキスト */
   alt: string
+  /** 画像の幅（ピクセル） */
   width: number
+  /** 画像の高さ（ピクセル） */
   height: number
+  /** 追加のCSSクラス名 */
   className?: string
+  /** 優先読み込みフラグ（trueの場合、画像を優先的に読み込む） */
   priority?: boolean
 }
 
@@ -20,7 +29,7 @@ export default function LazyImage({
   height,
   className = '',
   priority = false,
-}: LazyImageProps) {
+}: Readonly<LazyImageProps>) {
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 

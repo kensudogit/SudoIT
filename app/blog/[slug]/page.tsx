@@ -13,8 +13,13 @@ const blogPosts: Record<string, React.ComponentType> = {
   'microservices-architecture': MicroservicesArchitecture,
 }
 
+/**
+ * ブログ記事ページコンポーネントのプロパティ
+ */
 interface PageProps {
+  /** URLパラメータ */
   params: {
+    /** ブログ記事のスラッグ（識別子） */
     slug: string
   }
 }

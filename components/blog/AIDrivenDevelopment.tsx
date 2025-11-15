@@ -257,6 +257,10 @@ JUnit 5とMockitoを使用した包括的なテストクラスを作成してく
           <div className={styles.codeBlock}>
             <h4>生成されたテストコード例</h4>
             <pre>{`@ExtendWith(MockitoExtension.class)
+/**
+ * ユーザーサービスのユニットテストクラス
+ * UserServiceの各メソッドの動作を検証する
+ */
 class UserServiceTest {
     @Mock
     private UserRepository userRepository;
@@ -318,6 +322,10 @@ class UserServiceTest {
             <pre>{`@SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
+/**
+ * ユーザーコントローラーの統合テストクラス
+ * REST APIエンドポイントの動作を統合的に検証する
+ */
 class UserControllerIntegrationTest {
     @Autowired
     private MockMvc mockMvc;

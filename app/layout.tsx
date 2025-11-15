@@ -65,7 +65,11 @@ export const viewport: Viewport = {
   ],
 }
 
+/**
+ * ルートレイアウトコンポーネントのプロパティ
+ */
 interface RootLayoutProps {
+  /** レイアウト内に表示する子要素 */
   readonly children: React.ReactNode
 }
 

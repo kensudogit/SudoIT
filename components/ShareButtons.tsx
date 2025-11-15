@@ -3,8 +3,13 @@
 import { useEffect, useState } from 'react'
 import styles from './ShareButtons.module.css'
 
+/**
+ * シェアボタンコンポーネントのプロパティ
+ */
 interface ShareButtonsProps {
+  /** シェアする記事のタイトル */
   title: string
+  /** シェアする記事のURL */
   url: string
 }
 
